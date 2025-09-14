@@ -2,7 +2,10 @@ package lab1;
 
 public class Multiples {
     public static void main(String[] args) {
-        System.out.println(multiples(1000, 3, 5));
+        int count1 = multiples(1000, 3, 5);
+        System.out.println("With args:" + count1);
+        int count2 = multiples();
+        System.out.println("With default:" + count2);
     }
 
     static int multiples(int n, int a, int b) {
@@ -21,5 +24,8 @@ public class Multiples {
             }
         }
         return count;
+    }
+    static int multiples() {
+        return multiples(1000, 3, 5);
     }
 }
